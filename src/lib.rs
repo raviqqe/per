@@ -1,9 +1,15 @@
 #![doc = include_str!("../README.md")]
 #![no_std]
 
+extern crate alloc;
 #[cfg(test)]
 extern crate std;
 
+mod radix_vec;
+
+pub use radix_vec::*;
+
+// TODO Remove this dummy function.
 /// Adds two numbers.
 pub const fn add(x: usize, y: usize) -> usize {
     x + y
