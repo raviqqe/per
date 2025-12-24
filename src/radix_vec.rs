@@ -1,6 +1,8 @@
+mod item;
 mod leaf;
 mod node;
 
+use self::item::Item;
 use self::leaf::Leaf;
 use self::node::Node;
 use alloc::sync::Arc;
@@ -8,7 +10,7 @@ use alloc::sync::Arc;
 /// A radix vector.
 #[derive(Clone, Debug, Default)]
 pub struct RadixVec<T, const N: usize = 32> {
-    root: Option<Arc<Node<T, N>>>,
+    root: Option<Arc<Item<T, N>>>,
     len: usize,
 }
 
