@@ -34,7 +34,7 @@ impl<T, const N: usize> RadixVec<T, N> {
     pub fn push(&self, value: T) -> Self {
         Self {
             root: Some(Arc::new(if let Some(root) = &self.root {
-                Item::leaf(Leaf::singleton(value))
+                root.push(value)
             } else {
                 Item::leaf(Leaf::singleton(value))
             })),
