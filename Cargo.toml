@@ -1,6 +1,6 @@
 [package]
 name = "immut"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 description = "Immutable all the things!"
 repository = "https://github.com/raviqqe/immut"
@@ -9,6 +9,9 @@ license-file = "./LICENSE"
 [[bench]]
 harness = false
 name = "main"
+
+[dependencies]
+pretty_assertions = "1.4.1"
 
 [dev-dependencies]
 criterion = { package = "codspeed-criterion-compat", version = "2.7.2" }
@@ -34,6 +37,3 @@ use_self = "deny"
 [lints.rust]
 missing_docs = "deny"
 warnings = "deny"
-
-[dependencies]
-pretty_assertions = "1.4.1"
