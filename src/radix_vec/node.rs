@@ -1,8 +1,9 @@
 use super::item::Item;
+use alloc::sync::Arc;
 use core::mem::MaybeUninit;
 
 pub struct Node<T, const N: usize> {
-    children: [MaybeUninit<Item<T, N>>; N],
+    children: [MaybeUninit<Arc<Item<T, N>>>; N],
     leaf: bool,
 }
 
