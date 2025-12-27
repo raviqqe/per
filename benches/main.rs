@@ -1,7 +1,7 @@
 #![allow(missing_docs)]
 
 use criterion::{Criterion, black_box, criterion_group, criterion_main};
-use immut::add;
+use per::add;
 
 const ITERATION_COUNT: usize = 10000;
 
