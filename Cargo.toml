@@ -3,7 +3,7 @@ name = "per"
 version = "0.1.1"
 edition = "2024"
 description = "Immutable all the things!"
-repository = "https://github.com/raviqqe/immut"
+repository = "https://github.com/raviqqe/per"
 license-file = "./LICENSE"
 
 [[bench]]
